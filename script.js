@@ -27,7 +27,7 @@ async function checkHours() {
     await page.waitForSelector('#hours');
     await delay(5000);
     const screenshot = await page.screenshot({ path: 'timesheet.png', fullPage: true });
-    // sendToSlack(screenshot);
+    // sendToSlack(screenshot); //uncomment if you added slack token to send the screenshot to your channel in slack
     await browser.close();
     
 }
